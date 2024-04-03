@@ -241,3 +241,9 @@ do
 		end
 	end)
 end
+
+--Quest Objectives
+WatchFrameHeader:ClearAllPoints()
+WatchFrameHeader:SetPoint("CENTER", Minimap, -100, -110)
+WatchFrameCollapseExpandButton:ClearAllPoints()
+WatchFrameCollapseExpandButton:SetPoint("CENTER", WatchFrameHeader, 60, 1)
