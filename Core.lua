@@ -57,14 +57,17 @@ end
 
 function DF:ShowStartMessage()
     local version = ''
-
-    if not GetAddOnMetadata then
+--[[
+        if not GetAddOnMetadata then
         version = C_AddOns.GetAddOnMetadata('DragonflightUI', 'Version')
     else
         version = GetAddOnMetadata('DragonflightUI', 'Version')
     end
 
     self:Print(version .. " loaded! Type '/dragonflight'or '/df' to open the options menu.")
+]]
+
+    print("|cffffd700Chromie |cff1974d2Dragonflight |cffffffffloaded. Welcome " .. UnitName("player") .. "!")
 end
 
 function DF:GetClassColor(class, alpha)
