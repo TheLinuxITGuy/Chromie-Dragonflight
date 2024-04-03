@@ -1,6 +1,5 @@
 ## Interface: 30300
 ## Title: Chromie |cff1974d2Dragonflight
-## Notes:
 ## Author: Youtube/@TheLinuxITGuy
 ## Notes: A UI that brings the Dragonflight UI to Chromie Craft.
 ## Version: 1.0
