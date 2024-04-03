@@ -1652,7 +1652,8 @@ end
 
 function Module.MovePlayerFrame(anchor, anchorOther, dx, dy)
     PlayerFrame:ClearAllPoints()
-    PlayerFrame:SetPoint(anchor, UIParent, anchorOther, dx, dy)
+    --PlayerFrame:SetPoint(anchor, UIParent, anchorOther, dx, dy)
+    PlayerFrame:SetPoint("CENTER", ActionButton1, -100, 250)
 end
 
 function Module.ChangeTargetFrame()
@@ -1870,7 +1871,8 @@ end
 
 function Module.MoveTargetFrame(anchor, anchorOther, dx, dy)
     TargetFrame:ClearAllPoints()
-    TargetFrame:SetPoint(anchor, UIParent, anchorOther, dx, dy)
+    --TargetFrame:SetPoint(anchor, UIParent, anchorOther, dx, dy)
+    TargetFrame:SetPoint("CENTER", ActionButton12, 100, 250)
 end
 
 function Module.ChangeToT()
