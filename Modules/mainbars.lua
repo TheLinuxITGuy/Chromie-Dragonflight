@@ -98,7 +98,7 @@ end
 
 function MainMenuBarMixin:actionbar_setup()
 	ActionButton1:SetParent(pUiMainBar)
-	ActionButton1:SetClearPoint('BOTTOMLEFT', pUiMainBar, 2, 2)
+	ActionButton1:SetClearPoint('BOTTOMLEFT', pUiMainBar, 2, 2) --the 30 adds space between the ActionButton1 and the XP bar
 	MultiBarBottomLeftButton1:SetClearPoint('BOTTOMLEFT', ActionButton1, 'BOTTOMLEFT', 0, 48)
 	
 	if config.buttons.pages.show then
@@ -187,14 +187,16 @@ event:RegisterEvents(function(self)
 		ExhaustionTick:SetSize(10, 14);
 		ExhaustionTick:SetClearPoint('CENTER', ExhaustionLevelFillBar, 'RIGHT', 0, 2);
 
-		MainMenuExpBar:SetStatusBarTexture(addon._dir..'uiexperiencebar');
+		--MainMenuExpBar:SetStatusBarTexture(addon._dir..'uiexperiencebar'); --original code
+		MainMenuExpBar:SetStatusBarTexture(addon.dir..'Rested');
 		if exhaustionStateID == 1 then
 			ExhaustionTick:Show();
-			MainMenuExpBar:GetStatusBarTexture():SetTexCoord(574/2048, 1137/2048, 34/64, 43/64);
-			--ExhaustionLevelFillBar:SetVertexColor(0.0, 0, 1, 0.45);
+			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(574/2048, 1137/2048, 34/64, 43/64); --original code
+			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		elseif exhaustionStateID == 2 then
-			MainMenuExpBar:GetStatusBarTexture():SetTexCoord(1/2048, 570/2048, 42/64, 51/64);
-			--ExhaustionLevelFillBar:SetVertexColor(0.58, 0.0, 0.55, 0.45);
+			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(1/2048, 570/2048, 42/64, 51/64); --original code
+			MainMenuExpBar:SetStatusBarTexture(addon.dir..'Main');
+			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		end
 	else
 		if exhaustionStateID == 1 then
