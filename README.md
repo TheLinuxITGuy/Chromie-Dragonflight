@@ -2,7 +2,7 @@
 The Dragonflight UI for Chromie Craft.
 
 ## Installation
-#### This is a stand-alone addon made for the WoW 3.3.5 client.
+This is a stand-alone addon made for the WoW 3.3.5 client.
 
 #### Manual Install
 1. Unpack the zip file included with this download.
