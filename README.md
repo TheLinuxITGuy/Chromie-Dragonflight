@@ -30,3 +30,6 @@ Code from [yuritsuki](https://github.com/yuritsuki/WoW-DragonflightUI)
 
 ## Screenshots
 ![](<Screenshots/ChromieDragonflight1.png>)
+
+## Donate
+https://www.paypal.com/donate/?hosted_button_id=WPTX2BMBARSG2
