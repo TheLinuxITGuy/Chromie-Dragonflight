@@ -5,6 +5,7 @@
 ## Version: GIT
 ## DefaultState: enabled
 ## SavedVariables: DragonflightUIDB
+## SavedVariablesPerCharacter: SOCD
 ## OptionalDeps: Ace3
 
 # Libs
@@ -39,3 +40,11 @@ init.lua
 # Actionbars
 
 pretty_actionbar.xml
+
+# Other
+itemrarity.lua
+characterrarity.lua
+
+# Bag Sort
+SushiSort.lua
+SushiSort.xml
