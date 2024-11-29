@@ -44,6 +44,7 @@ pretty_actionbar.xml
 # Other
 itemrarity.lua
 characterrarity.lua
+classcolors.lua
 
 # Bag Sort
 SushiSort.lua
