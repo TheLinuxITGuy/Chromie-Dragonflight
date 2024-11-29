@@ -1,5 +1,5 @@
 # cDF (Chromie Dragonflight)
-The Dragonflight UI for Chromie Craft.
+The Dragonflight UI for Chromie Craft and Warmane (any 3.3.5 client).
 
 ## Installation
 This is a stand-alone addon made for the WoW 3.3.5 client.
