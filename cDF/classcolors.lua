@@ -16,9 +16,9 @@ local function UpdateTargetNameColor()
         local r, g, b = GetTargetClassColor()
         TargetFrameNameBackground:SetVertexColor(r, g, b)
         TargetFrameTextureFrameName:SetTextColor(r, g, b)
-        print("Target name color updated: ", r, g, b)
+        --print("Target name color updated: ", r, g, b)
     else
-        print("No target selected")
+        --print("No target selected")
     end
 end
 
