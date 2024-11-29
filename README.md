@@ -24,9 +24,12 @@ This is a stand-alone addon made for the WoW 3.3.5 client.
 - None atm
 
 ## Special Thanks
-Code from [s0h2x](https://github.com/s0h2x)
 
-Code from [yuritsuki](https://github.com/yuritsuki/WoW-DragonflightUI)
+- [s0h2x](https://github.com/s0h2x)
+
+- [yuritsuki](https://github.com/yuritsuki/WoW-DragonflightUI)
+
+- [Sushi Sort](https://felbite.com/addon/4174-sushisort)
 
 ## Screenshots
 ![](<Screenshots/ChromieDragonflight1.png>)
