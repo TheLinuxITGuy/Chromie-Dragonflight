@@ -1,38 +1,35 @@
-# cDF (Chromie Dragonflight)
-The Dragonflight UI for Chromie Craft and Warmane (any 3.3.5 client).
+# 🌟 🐉 cDF (Chromie Dragonflight)
+![GitHub Release](https://img.shields.io/github/v/release/TheLinuxITGuy/Chromie-Dragonflight?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TheLinuxITGuy/Chromie-Dragonflight/total?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
 
-## Installation
-This is a stand-alone addon made for the WoW 3.3.5 client.
+The Dragonflight UI for Chromie Craft or Warmane. 
 
-#### Manual Install
+## 🛠️ Installation
+This is a stand-alone addon made for the 3.3.5 client.
+
+#### cDF Install
 1. Unpack the zip file included with this download.
-2. Copy the "cDF" folder to your AddOns folder.
-3. Fire up Chromie Craft. :)
+2. Copy the __cDF__ folder to your AddOns folder.
 
-## Features
+## ✨ Features
 - Dragonflight Minimap
-- Dragonflight ActionBar
+- Dragonflight ActionBars
 - Dragonflight Unitframes
-- Dragonflight Castbar
+- Dragonflight Castbar & Timer
 - Dragonflight Bags
 - Dragonflight MicroMenu
 - Dragonflight Latency Bar
 - Dragonflight XP bar
-- Mousewheel up/down in Chat
 
-## Known issues
-- None atm
+## 🐞 Known issues
+- TBD
 
-## Special Thanks
-
+## 🌟 Grateful to All Contributors
+A heartfelt thank you to everyone who has contributed to the development of cDF. Your dedication is truly appreciated, and you’re making this addon better for everyone!
+Code from: 
 - [s0h2x](https://github.com/s0h2x)
-
 - [yuritsuki](https://github.com/yuritsuki/WoW-DragonflightUI)
-
 - [Sushi Sort](https://felbite.com/addon/4174-sushisort)
 
-## Screenshots
-![](<Screenshots/ChromieDragonflight1.png>)
-
-## Donate
+## 💖 Donate
 https://www.paypal.com/donate/?hosted_button_id=WPTX2BMBARSG2
