@@ -12,13 +12,16 @@ end
 
 -- Function to update the target's name color based on the target's class
 local function UpdateTargetNameColor()
-    if UnitExists("target") then
+    if UnitExists("target") and UnitIsPlayer("target") then
         local r, g, b = GetTargetClassColor()
         TargetFrameNameBackground:SetVertexColor(r, g, b)
-        TargetFrameTextureFrameName:SetTextColor(r, g, b)
+        --TargetFrameTextureFrameName:SetTextColor(r, g, b)
         --print("Target name color updated: ", r, g, b)
     else
-        --print("No target selected")
+        -- Reset to default color for NPCs
+        --TargetFrameNameBackground:SetVertexColor(1, 1, 1) -- default white background
+        --TargetFrameTextureFrameName:SetTextColor(1, 1, 1) -- default white text
+        --print("No player target selected or target is an NPC")
     end
 end
 
