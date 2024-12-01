@@ -1,10 +1,10 @@
 -- Create a function to get the item's rarity color
     local function GetRarityColor(rarity)
-        if rarity == 0 then -- Poor (gray)
-            return 0.2, 0.2, 0.2, 1 -- Very subtle gray
-        elseif rarity == 1 then -- Common (white)
-            return 0.6, 0.6, 0.6, 1 -- Very subtle white
-        elseif rarity == 2 then -- Uncommon (green)
+        --if rarity == 0 then -- Poor (gray)
+            --return 0.2, 0.2, 0.2, 1 -- Very subtle gray
+        --elseif rarity == 1 then -- Common (white)
+            --return 0.6, 0.6, 0.6, 1 -- Very subtle white
+        if rarity == 2 then -- Uncommon (green)
             return 0, 0.5, 0, 1 -- Very subtle green
         elseif rarity == 3 then -- Rare (blue)
             return 0, 0.25, 0.5, 1 -- Very subtle blue
@@ -12,10 +12,10 @@
             return 0.4, 0.13, 0.58, 1 -- Very subtle purple
         elseif rarity == 5 then -- Legendary (orange)
             return 0.8, 0.35, 0, 1 -- Very subtle orange
-        elseif rarity == 6 then -- Artifact (heirloom yellow)
-            return 0.7, 0.6, 0.3, 1 -- Very subtle yellow
+        --elseif rarity == 6 then -- Artifact (heirloom yellow)
+            --return 0.7, 0.6, 0.3, 1 -- Very subtle yellow
         else -- Default to very subtle white if rarity not found
-            return 0.6, 0.6, 0.6, 1
+            --return 0.6, 0.6, 0.6, 1
         end
     end
     
@@ -41,6 +41,23 @@
         end
     end
     
+    -- Function to check if the item is a Hearthstone or quest item
+    local function IsExcludedItem(itemLink)
+        -- Check for Hearthstone
+        local itemName = GetItemInfo(itemLink)
+        if itemName == "Hearthstone" or itemName == "Skinning Knife" or itemName == "Mining Pick" or itemName == "Symbol of Kings" then
+            return true
+        end
+    
+        -- Check if item is a quest item
+        local itemType = select(12, GetItemInfo(itemLink))
+        if itemType == "Quest" then
+            return true
+        end
+    
+        return false
+    end
+    
     -- Create a function to set the border color of bag items based on rarity
     local function SetItemBorderColor()
         --print("SetItemBorderColor called")
@@ -52,15 +69,23 @@
                 local invertedSlot = numSlots - slot + 1
                 local frame = _G["ContainerFrame"..(bag + 1).."Item"..invertedSlot]
                 if itemLink then
-                    local _, _, rarity = GetItemInfo(itemLink)
-                    --print("Item Link: ", itemLink, " Item Rarity: ", rarity)
-                    local r, g, b, a = GetRarityColor(rarity)
-                    --print("Rarity Color: R=", r, " G=", g, " B=", b, " A=", a)
-                    if frame then
-                        --print("Frame found for bag", bag, "slot", slot, "inverted to slot", invertedSlot)
-                        EnsureBorderTexture(frame, r, g, b, a)
+                    -- Skip Hearthstone and quest items
+                    if IsExcludedItem(itemLink) then
+                        if frame then
+                            ResetSlotBorderColor(frame)
+                            --print("Excluding item:", itemLink, "in bag", bag, "slot", slot)
+                        end
                     else
-                        --print("Frame not found for bag", bag, "slot", slot, "inverted to slot", invertedSlot)
+                        local _, _, rarity = GetItemInfo(itemLink)
+                        --print("Item Link: ", itemLink, " Item Rarity: ", rarity)
+                        local r, g, b, a = GetRarityColor(rarity)
+                        --print("Rarity Color: R=", r, " G=", g, " B=", b, " A=", a)
+                        if frame then
+                            --print("Frame found for bag", bag, "slot", slot, "inverted to slot", invertedSlot)
+                            EnsureBorderTexture(frame, r, g, b, a)
+                        else
+                            --print("Frame not found for bag", bag, "slot", slot, "inverted to slot", invertedSlot)
+                        end
                     end
                 else
                     if frame then
@@ -82,4 +107,3 @@
             SetItemBorderColor()
         end
     end)
-    
