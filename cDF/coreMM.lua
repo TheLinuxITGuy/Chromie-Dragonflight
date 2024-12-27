@@ -5,7 +5,7 @@ local assert = assert;
 local next = next;
 
 local addon = select(2,...);
-local config = addon.config --doestn load map.config otherwise
+local config = addon.config
 addon._map = CreateFrame('Frame');
 addon._noop = function() return; end
 
@@ -110,12 +110,14 @@ addon.SetSkin = function(button)
 	button.circle:SetSize(20, 20)
 	button.circle:SetPoint('CENTER', button)
 	button.circle:SetTexture(addon._dir..'border_buttons.tga')
+	button:SetAlpha(1)
 	
-	if addon.config.map.fade_button then
-		button:SetAlpha(0.2)
-		button:HookScript('OnEnter',fadein)
-		button:HookScript('OnLeave',fadeout)
-	else
-		button:SetAlpha(1)
-	end
+	-- i dont think fade_buttons work in 3.3.5a. At least not like that 
+	-- if addon.config.map.fade_button then
+	--	button:SetAlpha(0.2)
+	--	button:HookScript('OnEnter',fadein)
+	--	button:HookScript('OnLeave',fadeout)
+	--else
+	--	button:SetAlpha(1)
+	-- end
 end
