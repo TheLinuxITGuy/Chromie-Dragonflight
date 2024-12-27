@@ -12,7 +12,7 @@ addon.config = {
 		player_arrow_size = 40, 			--; player arrow on minimap center.
 		tracking_icons = false, 			--; show current tracking icons (old style).
 		skin_button = true, 				--; circle skin for addon buttons.
-		fade_button = false, 				--; fading for addon buttons.
+		-- fade_button = true, 				--; fading for addon buttons. I dont think this works in 3.3.5a
 		zonetext_font_size = 12,			--; zone text on top border.
 		zoom_in_out = false,				--; show zoom buttons (+/-).
 	},
@@ -31,3 +31,5 @@ addon.config = {
 		font = addon._dir..'expressway.ttf', --; main theme font.
 	}
 };
+-- Debugging
+-- print("addon.config.map initialized:", addon.config.map)
