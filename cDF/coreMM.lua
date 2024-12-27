@@ -5,6 +5,7 @@ local assert = assert;
 local next = next;
 
 local addon = select(2,...);
+local config = addon.config --doestn load map.config otherwise
 addon._map = CreateFrame('Frame');
 addon._noop = function() return; end
 
