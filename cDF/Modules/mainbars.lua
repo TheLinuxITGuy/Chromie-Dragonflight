@@ -1,4 +1,5 @@
 local addon = select(2,...);
+addon.dir = [[Interface\AddOns\cDF\assets\]]  --local assets = addon._dir; not setup for this somehow. lazy solution 
 local config = addon.config;
 local event = addon.package;
 local do_action = addon.functions;
