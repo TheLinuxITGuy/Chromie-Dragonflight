@@ -30,7 +30,7 @@ Modules\Unitframe.lua
 # Minimap
 
 configMM.lua
-utils\atlas.lua
+atlas.lua
 coreMM.lua
 map.lua
 time.lua

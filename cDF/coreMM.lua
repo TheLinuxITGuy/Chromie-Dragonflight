@@ -112,7 +112,7 @@ addon.SetSkin = function(button)
 	button.circle:SetTexture(addon._dir..'border_buttons.tga')
 	button:SetAlpha(1)
 	
-	-- i dont think fade_buttons work in 3.3.5a. At least not like that 
+	-- i dont think the fade_button works in 3.3.5a. At least not like that 
 	-- if addon.config.map.fade_button then
 	--	button:SetAlpha(0.2)
 	--	button:HookScript('OnEnter',fadein)

@@ -1,9 +1,9 @@
 local DF = LibStub('AceAddon-3.0'):NewAddon('cDF', 'AceConsole-3.0')
 local db
 
-DF.InterfaceVersion = select(4, GetBuildInfo())
-DF.Wrath = DF.InterfaceVersion >= 30400
-DF.Era = DF.InterfaceVersion <= 20000
+-- DF.InterfaceVersion = select(4, GetBuildInfo())
+-- DF.Wrath = DF.InterfaceVersion >= 30400
+-- DF.Era = DF.InterfaceVersion <= 20000
 
 local defaults = {
     profile = {
