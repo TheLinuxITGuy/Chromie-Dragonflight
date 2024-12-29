@@ -1,5 +1,6 @@
-local addon = select(2,...);
-local assets = addon._dir;
+local addon = select(2,...)
+addon._dir = addon._dir or [[Interface\AddOns\cDF\assets\]]
+local assets = addon._dir
 local unpack = unpack;
 local uiactionbar = assets..'uiactionbar';
 local uiexperiencebar = assets..'uiexperiencebar';
