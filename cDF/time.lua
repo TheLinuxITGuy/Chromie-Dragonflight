@@ -19,7 +19,7 @@ function map:SetCalendarDate()
 	end
 	
 	local _, _, day = CalendarGetDate();
-  	-- Ensure day is between 1 and 31
+  	-- Ensure day is at least 1 and not 0
 	day = max(1, day)
   	local atlasFormat = "ui-hud-calendar-%d-%s"
 	
