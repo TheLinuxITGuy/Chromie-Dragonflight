@@ -33,7 +33,7 @@ addon.config = {
 	style = {
 	-- @desc: customize art style based on blizzard texture versions
 	-- @param: old, new, [flying - only for gryphons], [none - for hide]
-		gryphons = 'flying',	--; display style for gryphons.
+		gryphons = 'new',	--; display style for gryphons.
 		xpbar = 'new', 		--; display style for XP and reputation bar.
 		bags = 'new',		--; display style for bags bar.
 	},
