@@ -1,3 +1,14 @@
+# Changelog: 
+
+Fixed all errors i encountered so far. 
+
+Merged some stuff, cause there were some duplicate files that would cause conlicts (eg there were two atlas.lua)
+
+To-do:
+
+Fully merge stuff together in one comprehensive addon and add visual options for config stuff 
+
+
 # 🌟 🐉 cDF (Chromie Dragonflight)
 ![GitHub Release](https://img.shields.io/github/v/release/TheLinuxITGuy/Chromie-Dragonflight?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TheLinuxITGuy/Chromie-Dragonflight/total?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
