@@ -2,7 +2,7 @@
 
 Fixed all errors i encountered so far. 
 
-Merged some stuff, cause there were some duplicate files that would cause conlicts (eg there were two atlas.lua)
+Merged some stuff, cause there were some duplicate files that would cause conflicts (eg there were two atlas.lua)
 
 To-do:
 
