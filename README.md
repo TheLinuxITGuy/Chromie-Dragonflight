@@ -1,12 +1,5 @@
-# Changelog: 
-
 Fixed all errors i encountered so far. 
 
-Merged some stuff, cause there were some duplicate files that would cause conflicts (eg there were two atlas.lua)
-
-To-do:
-
-Fully merge stuff together in one comprehensive addon and add visual options for config stuff 
 
 
 # 🌟 🐉 cDF (Chromie Dragonflight)
