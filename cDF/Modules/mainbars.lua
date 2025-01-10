@@ -1,5 +1,6 @@
 local addon = select(2,...);
 local config = addon.config;
+addon.dir = [[Interface\AddOns\cDF\assets\]]
 local event = addon.package;
 local do_action = addon.functions;
 local select = select;
@@ -188,14 +189,14 @@ event:RegisterEvents(function(self)
 		ExhaustionTick:SetClearPoint('CENTER', ExhaustionLevelFillBar, 'RIGHT', 0, 2);
 
 		--MainMenuExpBar:SetStatusBarTexture(addon._dir..'uiexperiencebar'); --original code
-		MainMenuExpBar:SetStatusBarTexture(addon.dir..'Rested');
+		MainMenuExpBar:SetStatusBarTexture(addon.dir..'Rested.blp');
 		if exhaustionStateID == 1 then
 			ExhaustionTick:Show();
 			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(574/2048, 1137/2048, 34/64, 43/64); --original code
 			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		elseif exhaustionStateID == 2 then
 			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(1/2048, 570/2048, 42/64, 51/64); --original code
-			MainMenuExpBar:SetStatusBarTexture(addon.dir..'Main');
+			MainMenuExpBar:SetStatusBarTexture(addon.dir..'Main.blp');
 			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		end
 	else

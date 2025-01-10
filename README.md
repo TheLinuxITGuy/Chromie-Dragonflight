@@ -1,3 +1,7 @@
+Fixed all errors i encountered so far. 
+
+
+
 # 🌟 🐉 cDF (Chromie Dragonflight)
 ![GitHub Release](https://img.shields.io/github/v/release/TheLinuxITGuy/Chromie-Dragonflight?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TheLinuxITGuy/Chromie-Dragonflight/total?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)

@@ -1,12 +1,16 @@
-local unpack = unpack;
-local select = select;
-local pairs = pairs;
-local assert = assert;
-local next = next;
+local DF = LibStub('AceAddon-3.0'):GetAddon('cDF')
+local config = DF.config
+local unpack = unpack
+local select = select
+local pairs = pairs
+local assert = assert
+local next = next
 
-local addon = select(2,...);
-addon._map = CreateFrame('Frame');
-addon._noop = function() return; end
+local addon = select(2,...)
+addon._map = addon._map or CreateFrame('Frame')
+addon._noop = addon._noop or function() return end
+
+local config = addon.config
 
 -- white list icons on minimap
 local WHITE_LIST = {
@@ -109,11 +113,12 @@ addon.SetSkin = function(button)
 	button.circle:SetSize(20, 20)
 	button.circle:SetPoint('CENTER', button)
 	button.circle:SetTexture(addon._dir..'border_buttons.tga')
-	
-	if addon.config.map.fade_button then
+	button:SetAlpha(1)
+	--review
+	if config.map and config.map.fade_button then
 		button:SetAlpha(0.2)
-		button:HookScript('OnEnter',fadein)
-		button:HookScript('OnLeave',fadeout)
+		button:HookScript('OnEnter', fadein)
+		button:HookScript('OnLeave', fadeout)
 	else
 		button:SetAlpha(1)
 	end

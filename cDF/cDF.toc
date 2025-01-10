@@ -29,8 +29,8 @@ Modules\Unitframe.lua
 
 # Minimap
 
-configMM.lua
 atlas.lua
+configMM.lua
 coreMM.lua
 map.lua
 time.lua
