@@ -36,5 +36,5 @@ Code from:
 - [yuritsuki](https://github.com/yuritsuki/WoW-DragonflightUI)
 - [Sushi Sort](https://felbite.com/addon/4174-sushisort)
 
-## 💖 Donate
+## 💖 Sponsor
 https://www.paypal.com/donate/?hosted_button_id=WPTX2BMBARSG2
