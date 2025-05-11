@@ -1365,6 +1365,23 @@ function Module.CreatePlayerFrameTextures()
         --textureSmall:SetScale(1)
         frame.PlayerFrameDeco = textureSmall
     end
+    local f = CreateFrame("Frame")
+    f:RegisterEvent("PLAYER_REGEN_DISABLED")
+    f:RegisterEvent("PLAYER_ENTERING_WORLD")
+    f:SetScript("OnEvent", function()
+        if PlayerFrame:IsShown() then
+            -- On vire toutes les textures rouges autour du cadre
+            for i = 1, PlayerFrame:GetNumRegions() do
+                local region = select(i, PlayerFrame:GetRegions())
+                if region and region:GetObjectType() == "Texture" then
+                    local tex = region:GetTexture()
+                    if tex and tex:find("UI%-TargetingFrame%-Flash") then
+                        region:SetTexture(nil)
+                    end
+                end
+            end
+        end
+    end)
 end
 
 function Module.ChangeStatusIcons()
