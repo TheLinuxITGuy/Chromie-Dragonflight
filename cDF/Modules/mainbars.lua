@@ -140,13 +140,13 @@ function MainMenuBarMixin:statusbar_setup()
 		bar:GetStatusBarTexture():SetDrawLayer('BORDER')
 		bar.status = bar:CreateTexture(nil, 'ARTWORK')
 		if old then
-			bar:SetSize(545, 10)
-			bar.status:SetPoint('CENTER', -3, -1) -- 0, -1
+			bar:SetSize(545, 13.5)
+			bar.status:SetPoint('CENTER', 0, -1)
 			bar.status:SetSize(545, 14)
 			bar.status:set_atlas('ui-hud-experiencebar')
 		elseif new then
-			bar:SetSize(537, 10)
-			bar.status:SetPoint('CENTER', -3, -2) -- 0, -2
+			bar:SetSize(537, 13.5)
+			bar.status:SetPoint('CENTER', 0, -2)
 			bar.status:set_atlas('ui-hud-experiencebar-round', true)
 			ReputationWatchStatusBar:SetStatusBarTexture(addon._dir..'statusbarfill.tga')
 			ReputationWatchStatusBarBackground:set_atlas('ui-hud-experiencebar-background', true)
