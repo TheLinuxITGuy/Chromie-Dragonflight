@@ -188,15 +188,16 @@ event:RegisterEvents(function(self)
 		ExhaustionTick:SetSize(10, 14);
 		ExhaustionTick:SetClearPoint('CENTER', ExhaustionLevelFillBar, 'RIGHT', 0, 2);
 
-		--MainMenuExpBar:SetStatusBarTexture(addon._dir..'uiexperiencebar'); --original code
-		MainMenuExpBar:SetStatusBarTexture(addon.dir..'Rested.blp');
+		MainMenuExpBar:SetStatusBarTexture(addon._dir..'uiexperiencebar'); --original code
+		MainMenuExpBar:SetSize(534,8)
+		--MainMenuExpBar:SetStatusBarTexture(addon.dir..'Rested.blp');
 		if exhaustionStateID == 1 then
 			ExhaustionTick:Show();
-			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(574/2048, 1137/2048, 34/64, 43/64); --original code
+			MainMenuExpBar:GetStatusBarTexture():SetTexCoord(574/2048, 1137/2048, 34/64, 43/64); --original code
 			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		elseif exhaustionStateID == 2 then
-			--MainMenuExpBar:GetStatusBarTexture():SetTexCoord(1/2048, 570/2048, 42/64, 51/64); --original code
-			MainMenuExpBar:SetStatusBarTexture(addon.dir..'Main.blp');
+			MainMenuExpBar:GetStatusBarTexture():SetTexCoord(1/2048, 570/2048, 42/64, 51/64); --original code
+			--MainMenuExpBar:SetStatusBarTexture(addon.dir..'Main.blp');
 			ExhaustionLevelFillBar:SetVertexColor(0, 0, 0, 0);
 		end
 	else
