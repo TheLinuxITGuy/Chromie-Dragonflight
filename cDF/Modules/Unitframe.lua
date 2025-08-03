@@ -2403,7 +2403,7 @@ end
 function Module.ChangePetFrame()
     local base = 'Interface\\Addons\\cDF\\Textures\\uiunitframe'
 
-    PetFrame:SetPoint('TOPLEFT', PlayerFrame, 'TOPLEFT', 100, -70)
+    PetFrame:SetPoint('TOPLEFT', PlayerFrame, 'TOPLEFT', 100, -85)
     PetFrameTexture:SetTexture('')
     PetFrameTexture:Hide()
 
