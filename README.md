@@ -12,6 +12,8 @@ This is a stand-alone addon made for the 3.3.5a client.
 2. Copy the __cDF__ folder to your AddOns folder.
 
 ## ✨ Features
+- Type /cdf for Options
+
 - Dragonflight Minimap
 - Dragonflight ActionBars
 - Dragonflight Unitframes
