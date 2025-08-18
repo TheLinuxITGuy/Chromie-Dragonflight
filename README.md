@@ -26,6 +26,9 @@ This is a stand-alone addon made for the 3.3.5a client.
 - Item rarity in bags
 - Item rarity on Character
 
+## Screenshot
+![Alt text](screenshot/cDF.png)
+
 ## 🐞 Known issues
 - Fixed all errors encountered so far.
 
