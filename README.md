@@ -24,7 +24,7 @@ This is a stand-alone addon made for the 3.3.5a client.
 - Item rarity on Character
 
 ## 🐞 Known issues
-- Fixed all errors i encountered so far.
+- Fixed all errors encountered so far.
 
 ## 🌟 Special thanks
  
