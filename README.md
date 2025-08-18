@@ -6,7 +6,7 @@ Fixed all errors i encountered so far.
 ![GitHub Release](https://img.shields.io/github/v/release/TheLinuxITGuy/Chromie-Dragonflight?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TheLinuxITGuy/Chromie-Dragonflight/total?style=for-the-badge&labelColor=%231A365D&color=%23E9FC12)
 
-The Dragonflight UI for Chromie Craft or Warmane. 
+The Dragonflight UI for the 3.3.5a client. 
 
 ## 🛠️ Installation
 This is a stand-alone addon made for the 3.3.5 client.
