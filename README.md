@@ -20,6 +20,8 @@ This is a stand-alone addon made for the 3.3.5a client.
 - Dragonflight MicroMenu
 - Dragonflight Latency Bar
 - Dragonflight XP bar
+- Item rarity in bags
+- Item rarity on Character
 
 ## 🐞 Known issues
 - Fixed all errors i encountered so far.
