@@ -9,7 +9,7 @@ Fixed all errors i encountered so far.
 The Dragonflight UI for the 3.3.5a client. 
 
 ## 🛠️ Installation
-This is a stand-alone addon made for the 3.3.5 client.
+This is a stand-alone addon made for the 3.3.5a client.
 
 #### cDF Install
 1. Unpack the zip file included with this download.
