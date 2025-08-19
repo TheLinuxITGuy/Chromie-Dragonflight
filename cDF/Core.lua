@@ -13,7 +13,7 @@ cDF.DB = nil
 function cDF:OnInitialize()
 	cDF.DB = AceDB:New("cDFDB", cDF.default, true)
 	AceConfig:RegisterOptionsTable("|cff1974d2cDF Commands", cDF.optionsSlash, "cdf")
-	print("|cffffd700Chromie |cff1974d2Dragonflight |cffffffffloaded. Welcome " .. UnitName("player") .. "!" .. " Type |cffffd700/cdf |cfffffffffor options")
+	print("|cffffd700Chromie |cff1974d2Dragonflight |cffffffffloaded. Welcome " .. UnitName("player") .. "!") --.. " Type |cffffd700/cdf |cfffffffffor options"
 end
 
 function cDF:OnEnable()
