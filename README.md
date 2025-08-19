@@ -27,7 +27,7 @@ Type __/cdf__ for Options
 - Item rarity on Character
 
 ## Screenshot
-![Alt text](screenshot/cDF.png)
+![Alt text](screenshot/cDF1.png)
 
 ## 🐞 Known issues
 - Fixed all errors encountered so far.
