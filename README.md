@@ -25,7 +25,7 @@ This is a stand-alone addon made for the 3.3.5a client.
 - Item rarity on Character
 
 ## Screenshot
-![Alt text](screenshot/cDF1.png)
+![Alt text](screenshot/cDF2.png)
 
 ## 🐞 Known issues
 - Fixed all errors encountered so far.
