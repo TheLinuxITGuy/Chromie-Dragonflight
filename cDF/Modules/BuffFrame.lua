@@ -4,6 +4,7 @@ local Module = cDF:NewModule(moduleName, 'AceConsole-3.0', 'AceHook-3.0', 'AceEv
 
 Module.buffFrame = nil
 
+--[[
 local function ReplaceBlizzardFrame(frame)
     frame.toggleButton = frame.toggleButton or CreateFrame('Button', nil, UIParent)
     local toggleButton = frame.toggleButton
@@ -62,6 +63,7 @@ local function ReplaceBlizzardFrame(frame)
     consolidatedBuffFrame:ClearAllPoints()
     consolidatedBuffFrame:SetPoint("RIGHT", toggleButton, "LEFT", -6, 0)
 end
+]]
 
 local function ShowToggleButtonIf(condition)
     if condition then
