@@ -60,8 +60,8 @@ end
 local function ReplaceBlizzardPlayerFrame(frame)
     local playerFrame = PlayerFrame
     playerFrame:ClearAllPoints()
-    --playerFrame:SetPoint("LEFT", frame, "LEFT", 0)
-    playerFrame:SetPoint("CENTER", ActionButton1, -100, 250)
+    playerFrame:SetPoint("LEFT", frame, "LEFT", 0)
+    --playerFrame:SetPoint("CENTER", ActionButton1, -100, 250)
     playerFrame:SetSize(frame:GetWidth(), frame:GetHeight())
     playerFrame:SetHitRectInsets(0, 0, 0, 0)
 
@@ -262,8 +262,8 @@ local function ReplaceBlizzardTargetFrame(frame, target, isBoss)
 
     local targetFrame = target
     targetFrame:ClearAllPoints()
-    --targetFrame:SetPoint("LEFT", frame, "LEFT", 0)
-    targetFrame:SetPoint("CENTER", ActionButton12, 100, 250)
+    targetFrame:SetPoint("LEFT", frame, "LEFT", 0)
+    --targetFrame:SetPoint("CENTER", ActionButton12, 100, 250)
     targetFrame:SetSize(frame:GetWidth(), frame:GetHeight())
     targetFrame:SetHitRectInsets(0, 0, 0, 0)
 
