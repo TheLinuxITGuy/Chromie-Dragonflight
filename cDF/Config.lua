@@ -111,10 +111,3 @@ cDF.default = {
         widgets = {}
     }
 }
-
---Moves pfQuest if exists to bottom left corner
-if pfQuestIcon then
-        pfQuestIcon:ClearAllPoints()
-        pfQuestIcon:SetParent(UIParent)
-        pfQuestIcon:SetPoint("BOTTOMLEFT", UIParent, 0, 0)
-end

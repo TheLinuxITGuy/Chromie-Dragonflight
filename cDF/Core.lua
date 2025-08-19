@@ -145,9 +145,19 @@ local function MoveChatOnFirstLoad()
     chat:SetUserPlaced(true)
 end
 
+local function MovepfQuestOnFirstLoad()
+local pfquest = pfQuestIcon
+	if pfquest then
+		pfquest:ClearAllPoints()
+		pfquest:SetParent(UIParent)
+		pfquest:SetPoint("BOTTOMLEFT", UIParent, 0, 0)
+	end
+end
+
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent", function(self, event)
     MoveChatOnFirstLoad()
+	MovepfQuestOnFirstLoad()
     self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 end)
