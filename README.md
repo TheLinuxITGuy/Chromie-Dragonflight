@@ -28,7 +28,7 @@ This is a stand-alone addon made for the 3.3.5a client.
 ![Alt text](screenshot/cDF2.png)
 
 ## 🐞 Known issues
-- Fixed all errors encountered so far.
+- /cdf edit not working
 
 ## 🌟 Special thanks
  
