@@ -12,6 +12,8 @@ This is a stand-alone addon made for the 3.3.5a client.
 2. Copy the __cDF__ folder to your AddOns folder.
 
 ## ✨ Features
+__/cdf edit__ to move things
+
 - Dragonflight Minimap
 - Dragonflight ActionBars
 - Dragonflight Unitframes
@@ -27,11 +29,10 @@ This is a stand-alone addon made for the 3.3.5a client.
 ## Screenshot
 ![Alt text](screenshot/cDF2.png)
 
-## 🐞 Known issues
-- /cdf edit not working
+## 🐞 Coming Soon
+- HD point of interest for Minimap
 
 ## 🌟 Special thanks
- 
 a3st, s0h2x, yuritsuki, and Sushi Sort
 
 ## 💖 Sponsor
