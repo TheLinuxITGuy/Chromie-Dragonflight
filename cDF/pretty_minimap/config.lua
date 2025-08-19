@@ -1,5 +1,5 @@
 local addon = select(2,...);
-addon._dir = [[Interface\AddOns\pretty_minimap\assets\]];
+addon._dir = [[Interface\AddOns\cDF\pretty_minimap\assets\]];
 addon.config = {
 	map = {
 	-- @desc: main map settings
