@@ -2,7 +2,7 @@
 ## Title: Chromie |cff1974d2Dragonflight
 ## Notes: The Dragonflight UI for 3.3.5a.
 ## Author: Youtube/@TheLinuxITGuy
-## Version: 1.1.7
+## Version: 1.1.8
 ## DefaultState: enabled
 ## SavedVariables: cDFDB
 
