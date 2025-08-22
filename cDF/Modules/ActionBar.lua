@@ -757,6 +757,23 @@ local function ShowBackgroundActionButton(button)
     normalTexture:SetAlpha(0)
 end
 
+-- Register the Expressway font for action bar numbers
+local EXPRESSWAY_FONT_PATH = [[Interface\AddOns\cDF\Textures\Minimap\assets\expressway.ttf]]
+CreateFont("ExpresswayHotkeyFont")
+_G["ExpresswayHotkeyFont"]:SetFont(EXPRESSWAY_FONT_PATH, 14, "OUTLINE")
+
+local function ApplyHotkeyFont()
+    for i = 1, 12 do
+        local button = _G["ActionButton" .. i]
+        if button then
+            local hotkey = _G[button:GetName() .. "HotKey"]
+            if hotkey then
+                hotkey:SetFont(EXPRESSWAY_FONT_PATH, 14, "OUTLINE")
+            end
+        end
+    end
+end
+
 local function ActionButton_UpdateHotkeys(self, actionButtonType)
     local id
     if not actionButtonType then
@@ -781,6 +798,7 @@ local function ActionButton_UpdateHotkeys(self, actionButtonType)
     else
         hotKeyText:SetText(text)
         hotKeyText:SetPoint("TOPLEFT", 1, -3)
+        hotKeyText:SetFontObject("ExpresswayHotkeyFont")
         hotKeyText:Show()
     end
 end
@@ -993,11 +1011,32 @@ local function MainMenuBar_ToPlayerArt()
     Module.bagsBar.toggleButton:Show()
 end
 
+local EXPRESSWAY_FONT_PATH = [[Interface\AddOns\cDF\Textures\Minimap\assets\expressway.ttf]]
+
 function Module:OnEnable()
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
     self:RegisterEvent("PET_BAR_UPDATE")
 
-    self:SecureHook('ActionButton_UpdateHotkeys', ActionButton_UpdateHotkeys)
+    -- Register and apply the Expressway font for action bar numbers
+    ApplyHotkeyFont()
+    CreateFont("ExpresswayHotkeyFont")
+    _G["ExpresswayHotkeyFont"]:SetFont(EXPRESSWAY_FONT_PATH, 12, "OUTLINE")
+
+    -- Apply font to all existing action buttons
+    for i = 1, 12 do
+        local button = _G["ActionButton" .. i]
+        if button then
+            local hotkey = _G[button:GetName() .. "HotKey"]
+            if hotkey then
+                hotkey:SetFontObject("ExpresswayHotkeyFont")
+            end
+        end
+    end
+
+    self:SecureHook('ActionButton_UpdateHotkeys', function(...)
+        ActionButton_UpdateHotkeys(...)
+        ApplyHotkeyFont() -- Reapply font after hotkey updates
+    end)
     self:SecureHook('ActionButton_ShowGrid', ActionButton_ShowGrid)
     self:SecureHook('ActionButton_Update', ActionButton_Update)
     self:SecureHook('ReputationWatchBar_Update', ReputationWatchBar_Update)
