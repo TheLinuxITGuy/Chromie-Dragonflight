@@ -30,7 +30,7 @@ __/cdf edit__ to move things
 ![Alt text](screenshot/cDF2.png)
 
 ## 🐞 Coming Soon
-- HD poi icons for Minimap
+- TBD
 
 ## 🌟 Special thanks
 a3st, s0h2x, yuritsuki, and Sushi Sort
