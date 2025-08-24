@@ -86,6 +86,7 @@ local function ReplaceBlizzardPlayerFrame(frame)
     healthBar:ClearAllPoints()
     healthBar:SetPoint("TOPLEFT", 72, -15)
     healthBar:SetSize(123, 20)
+    
 
     local statusBarTexture = healthBar:GetStatusBarTexture()
     statusBarTexture:SetAllPoints(healthBar)
@@ -96,6 +97,7 @@ local function ReplaceBlizzardPlayerFrame(frame)
     manaBar:ClearAllPoints()
     manaBar:SetPoint("TOPLEFT", 72, -37)
     manaBar:SetSize(123, 9)
+    
 
     statusBarTexture = manaBar:GetStatusBarTexture()
     statusBarTexture:SetAllPoints(manaBar)
@@ -164,6 +166,53 @@ local function ReplaceBlizzardPlayerFrame(frame)
     groupText:ClearAllPoints()
     groupText:SetPoint("CENTER", groupIndicatorFrame, 0, 0)
     groupText:SetJustifyH("CENTER")
+
+    --PLAYER
+    -- Hook for health bar to brighten color after Blizzard updates it
+    hooksecurefunc("UnitFrameHealthBar_Update", function(bar, unit)
+        if bar == PlayerFrameHealthBar and unit == "player" then
+            local r, g, b = bar:GetStatusBarTexture():GetVertexColor()  -- Use this to get the accurate color post-update
+            local amount = .5  -- Adjust between 0 (original) and 1 (white) for brightness level
+            bar:SetStatusBarColor(r, amount + (1 - amount) * g, b)
+        end
+    end)
+
+    -- Hook for mana/power bar to brighten color after Blizzard updates it
+    hooksecurefunc("UnitFrameManaBar_UpdateType", function(bar)
+        if bar == PlayerFrameManaBar then
+            local r, g, b = bar:GetStatusBarTexture():GetVertexColor()  -- Use this for accuracy
+            local amount = .3  -- Same adjustment as above
+            bar:SetStatusBarColor(amount + (1 - amount) * r, amount + (1 - amount) * g, amount + (1 - amount) * b)
+        end
+    end)
+
+    -- Force initial updates to apply the hooks right away (call these last)
+    UnitFrameHealthBar_Update(PlayerFrameHealthBar, "player")
+    UnitFrameManaBar_Update(PlayerFrameManaBar, "player")
+
+    --TARGET
+        -- Hook for health bar to brighten color after Blizzard updates it
+    hooksecurefunc("UnitFrameHealthBar_Update", function(bar, unit)
+        if bar == TargetFrameHealthBar and unit == "target" then
+            local r, g, b = bar:GetStatusBarTexture():GetVertexColor()  -- Use this to get the accurate color post-update
+            local amount = .5  -- Adjust between 0 (original) and 1 (white) for brightness level
+            bar:SetStatusBarColor(r, amount + (1 - amount) * g, b)
+        end
+    end)
+
+    -- Hook for mana/power bar to brighten color after Blizzard updates it
+    hooksecurefunc("UnitFrameManaBar_UpdateType", function(bar)
+        if bar == TargetFrameManaBar then
+            local r, g, b = bar:GetStatusBarTexture():GetVertexColor()  -- Use this for accuracy
+            local amount = .3  -- Same adjustment as above
+            bar:SetStatusBarColor(amount + (1 - amount) * r, amount + (1 - amount) * g, amount + (1 - amount) * b)
+        end
+    end)
+
+    -- Force initial updates to apply the hooks right away (call these last)
+    UnitFrameHealthBar_Update(TargetFrameHealthBar, "target")
+    UnitFrameManaBar_Update(TargetFrameManaBar, "target")
+
 end
 
 local function ReplaceBlizzardRuneFrame()
