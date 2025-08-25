@@ -161,3 +161,21 @@ f:SetScript("OnEvent", function(self, event)
 	MovepfQuestOnFirstLoad()
     self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 end)
+
+local function MoveQuestieOnFirstLoad()
+    local questie = _G["LibDBIcon10_Questie"]
+    if questie then
+        questie:ClearAllPoints()
+        questie:SetParent(UIParent)
+        questie:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 0, 0)
+        questie:Show()  -- Ensure it's visible after moving
+    end
+end
+
+local f = CreateFrame("Frame")
+f:SetScript("OnUpdate", function(self, elapsed)
+    MoveQuestieOnFirstLoad()
+    if _G["LibDBIcon10_Questie"] then
+        self:SetScript("OnUpdate", nil)  -- Stop polling once found and moved
+    end
+end)
